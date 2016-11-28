@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>QR code app</title>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#3F51B5">
+	<!-- Add to home screen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="QR code app">
+	<link rel="apple-touch-icon" href="images/icons/icon-512.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="styles/material.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__drawer-button">
+				<i class="material-icons">menu</i>
+			</div>
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">QR code app</span>
+			</div>
+		</header>
+
+		<main class="mdl-layout__content">
+			<div class="page-content">
+
+				<div id="new-qr">
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="qr-text" value="https://qr-pwa.azurewebsites.net" aria-label="input text"
+						/>
+						<label for="qr-text" class="mdl-textfield__label">Text...</label>
+					</div>
+
+					<div class="mdl-card mdl-shadow--2dp qr-card">
+						<qr-code id="qr-code" data="https://qr-pwa.azurewebsites.net" modulesize="10" margin="2"></qr-code>
+					</div>
+
+					<div class="actions">
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" id="upload" onclick="window.saveQrCode()">
+              <i class="material-icons">cloud_upload</i>
+            </button>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" id="download" onclick="window.download()">
+              <i class="material-icons">file_download</i>
+            </button>
+					</div>
+
+				</div>
+
+				<div id="saved-qr" class="mdl-card mdl-shadow--2dp">
+					<div class="actions" id="saved-header">
+						<!--actions-->
+						<h3 style="flex-grow: 1">Latest</h3>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" onclick="window.getQrCodes()"
+							style="align-item: flex-end">
+              <i class="material-icons">refresh</i>
+            </button>
+					</div>
+
+					<div id="spinner">
+						<div class="mdl-spinner mdl-js-spinner is-active"></div>
+					</div>
+					<!--list of qrCodes-->
+					<ul id="recentQrCodes" class="mdl-list"></ul>
+				</div>
+
+			</div>
+		</main>
+	</div>
+
+	<div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
+		<div class="mdl-snackbar__text"></div>
+		<button class="mdl-snackbar__action" type="button" onclick="window.closeToast()"></button>
+	</div>
+
+	<script defer src="scripts/material.min.js"></script>
+	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+	<script src="bower_components/qrjs/qr.js"></script>
+	<link rel="import" href="bower_components/qr-code/src/qr-code.html">
+	<script defer src="scripts/app.js"></script>
+</body>
+
+</html>

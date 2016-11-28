@@ -1,0 +1,13 @@
+// Placez vos paramètres dans ce fichier pour remplacer les paramètres par défaut et les paramètres utilisateur.
+{
+  /* json schema */
+  "json.schemas": [
+    /* manifest for chrome extension */
+    {
+      "fileMatch": [
+        "/manifest.json"
+      ],
+      "url": "http://json.schemastore.org/web-manifest"
+    }
+  ]
+}

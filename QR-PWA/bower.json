@@ -1,0 +1,27 @@
+{
+  "name": "qr-pwa",
+  "authors": [
+    "e-krebs"
+  ],
+  "description": "a qr-code generator progressive web app - made as an example of a PWA",
+  "main": "index.html",
+  "keywords": [
+    "PWA",
+    "progressive",
+    "web app",
+    "QRCode",
+    "QR"
+  ],
+  "license": "MIT",
+  "homepage": "https://qr-pwa.azurewebsites.net",
+  "private": false,
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "qr-code": "webcomponent-qr-code#^0.1.8",
+    "qrjs": "^0.1.2",
+    "webcomponentsjs": "^0.7.22"
+  }
+}

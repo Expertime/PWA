@@ -1,0 +1,17 @@
+{
+  "name": "qr-pwa",
+  "description": "a qr-code generator progressive web app - made as an example of a PWA",
+  "readme": "none",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expertime/pwa"
+  },
+  "version": "1.0.0",
+  "author": "e-krebs",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "serve-static": "^1.11.1",
+    "firebase-tools": "^3.1.0"
+  }
+}
