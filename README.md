@@ -14,5 +14,5 @@ This project is a simple web app using web technologies (html, js, etc.)
 
 This project is an api developed in ```C#``` with the dotnet framework : ```.net core``` and ```.net 4.6``` (to be compatible with azure APIs)
 
-[1]: https://www.github.com/expertime/pwa/qr-pwa/
-[2]: https://www.github.com/expertime/pwa/qr-api/ 
+[1]: https://github.com/expertime/pwa/tree/master/QR-PWA
+[2]: https://github.com/expertime/pwa/tree/master/QR-API

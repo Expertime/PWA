@@ -8,4 +8,4 @@ Theses data are stored in an AzureTable, which connection string is set in the `
 
 More info and live demo of QR-PWA [here][1]
 
-[1]: https://www.github.com/expertime/pwa/qr-api/
+[1]: https://github.com/expertime/pwa/tree/master/QR-API

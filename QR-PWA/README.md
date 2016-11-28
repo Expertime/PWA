@@ -35,4 +35,4 @@ For more information about PWA: [Google Developers](https://developers.google.co
 
 For other examples of PWA: [PWA rocks](https://pwa.rocks/)
 
-[1]: https://www.github.com/expertime/pwa/qr-api/
+[1]: https://github.com/expertime/pwa/tree/master/QR-API
